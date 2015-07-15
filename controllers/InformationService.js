@@ -5,9 +5,10 @@ exports.conversionsGet = function(category, target, page) {
   var examples = {};
   
   examples['application/json'] = [ {
-  "options" : "",
+  "id" : "8daae6d1-26e0-11e5-b2a1-0800273b325b",
   "category" : "audio",
-  "target" : "mp3"
+  "target" : "mp3",
+  "options" : ""
 } ];
   
 

@@ -1,13 +1,14 @@
 'use strict';
 
-exports.jobsJobIdConversionsGet = function(token, key, jobId) {
+exports.jobsJobIdConversionsGet = function(xOcToken, xOcApiKey, jobId) {
 
   var examples = {};
   
   examples['application/json'] = [ {
-  "options" : "",
+  "id" : "8daae6d1-26e0-11e5-b2a1-0800273b325b",
   "category" : "audio",
-  "target" : "mp3"
+  "target" : "mp3",
+  "options" : ""
 } ];
   
 
@@ -16,14 +17,15 @@ exports.jobsJobIdConversionsGet = function(token, key, jobId) {
     return examples[Object.keys(examples)[0]];
   
 }
-exports.jobsJobIdConversionsPost = function(body, token, key, jobId) {
+exports.jobsJobIdConversionsPost = function(body, xOcToken, xOcApiKey, jobId) {
 
   var examples = {};
   
   examples['application/json'] = {
-  "options" : "",
+  "id" : "8daae6d1-26e0-11e5-b2a1-0800273b325b",
   "category" : "audio",
-  "target" : "mp3"
+  "target" : "mp3",
+  "options" : ""
 };
   
 
@@ -32,14 +34,15 @@ exports.jobsJobIdConversionsPost = function(body, token, key, jobId) {
     return examples[Object.keys(examples)[0]];
   
 }
-exports.jobsJobIdConversionsConversionIdGet = function(token, key, jobId, conversionId) {
+exports.jobsJobIdConversionsConversionIdGet = function(xOcToken, xOcApiKey, jobId, conversionId) {
 
   var examples = {};
   
   examples['application/json'] = {
-  "options" : "",
+  "id" : "8daae6d1-26e0-11e5-b2a1-0800273b325b",
   "category" : "audio",
-  "target" : "mp3"
+  "target" : "mp3",
+  "options" : ""
 };
   
 
@@ -48,14 +51,15 @@ exports.jobsJobIdConversionsConversionIdGet = function(token, key, jobId, conver
     return examples[Object.keys(examples)[0]];
   
 }
-exports.jobsJobIdConversionsConversionIdDelete = function(token, key, jobId, conversionId) {
+exports.jobsJobIdConversionsConversionIdDelete = function(xOcToken, xOcApiKey, jobId, conversionId) {
 
   var examples = {};
   
   examples['application/json'] = {
-  "options" : "",
+  "id" : "8daae6d1-26e0-11e5-b2a1-0800273b325b",
   "category" : "audio",
-  "target" : "mp3"
+  "target" : "mp3",
+  "options" : ""
 };
   
 

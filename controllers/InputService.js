@@ -1,17 +1,17 @@
 'use strict';
 
-exports.jobsJobIdInputGet = function(token, key, jobId) {
+exports.jobsJobIdInputGet = function(xOcToken, xOcApiKey, jobId) {
 
   var examples = {};
   
   examples['application/json'] = [ {
-  "filename" : "image.png",
-  "size" : "12835187",
-  "created_at" : "2015-07-08T13:32:04.007+0000",
   "id" : "43",
   "source" : "http://www.dropbox.com/f/sfasdfhasdjkr434fadf",
+  "created_at" : "2015-07-15T15:11:53.290+0000",
+  "filename" : "image.png",
   "type" : "aeiou",
-  "modified_at" : "2015-07-08T13:32:04.007+0000"
+  "modified_at" : "2015-07-15T15:11:53.290+0000",
+  "size" : "12835187"
 } ];
   
 
@@ -20,18 +20,18 @@ exports.jobsJobIdInputGet = function(token, key, jobId) {
     return examples[Object.keys(examples)[0]];
   
 }
-exports.jobsJobIdInputPost = function(body, token, key, jobId) {
+exports.jobsJobIdInputPost = function(body, xOcToken, xOcApiKey, jobId) {
 
   var examples = {};
   
   examples['application/json'] = {
-  "filename" : "image.png",
-  "size" : "12835187",
-  "created_at" : "2015-07-08T13:32:04.009+0000",
   "id" : "43",
   "source" : "http://www.dropbox.com/f/sfasdfhasdjkr434fadf",
+  "created_at" : "2015-07-15T15:11:53.296+0000",
+  "filename" : "image.png",
   "type" : "aeiou",
-  "modified_at" : "2015-07-08T13:32:04.009+0000"
+  "modified_at" : "2015-07-15T15:11:53.296+0000",
+  "size" : "12835187"
 };
   
 
@@ -40,18 +40,18 @@ exports.jobsJobIdInputPost = function(body, token, key, jobId) {
     return examples[Object.keys(examples)[0]];
   
 }
-exports.jobsJobIdInputFileIdGet = function(token, key, jobId, fileId) {
+exports.jobsJobIdInputFileIdGet = function(xOcToken, xOcApiKey, jobId, fileId) {
 
   var examples = {};
   
   examples['application/json'] = {
-  "filename" : "image.png",
-  "size" : "12835187",
-  "created_at" : "2015-07-08T13:32:04.011+0000",
   "id" : "43",
   "source" : "http://www.dropbox.com/f/sfasdfhasdjkr434fadf",
+  "created_at" : "2015-07-15T15:11:53.298+0000",
+  "filename" : "image.png",
   "type" : "aeiou",
-  "modified_at" : "2015-07-08T13:32:04.011+0000"
+  "modified_at" : "2015-07-15T15:11:53.298+0000",
+  "size" : "12835187"
 };
   
 
@@ -60,18 +60,18 @@ exports.jobsJobIdInputFileIdGet = function(token, key, jobId, fileId) {
     return examples[Object.keys(examples)[0]];
   
 }
-exports.jobsJobIdInputFileIdDelete = function(token, key, jobId, fileId) {
+exports.jobsJobIdInputFileIdDelete = function(xOcToken, xOcApiKey, jobId, fileId) {
 
   var examples = {};
   
   examples['application/json'] = {
-  "filename" : "image.png",
-  "size" : "12835187",
-  "created_at" : "2015-07-08T13:32:04.012+0000",
   "id" : "43",
   "source" : "http://www.dropbox.com/f/sfasdfhasdjkr434fadf",
+  "created_at" : "2015-07-15T15:11:53.307+0000",
+  "filename" : "image.png",
   "type" : "aeiou",
-  "modified_at" : "2015-07-08T13:32:04.012+0000"
+  "modified_at" : "2015-07-15T15:11:53.307+0000",
+  "size" : "12835187"
 };
   
 

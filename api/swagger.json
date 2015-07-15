@@ -7,930 +7,8 @@
   },
   "produces": ["application/json"],
   "host": "localhost:8080",
-  "basePath": "",
+  "basePath": "/",
   "paths": {
-  
-  "/jobs/{job_id}/input": {
-    "get": {
-      "x-swagger-router-controller": "Input",
-      "tags": ["Input"],
-      "operationId": "jobsJobIdInputGet",
-      "parameters": [
-        
-        {
-  "name" : "token",
-  "in" : "header",
-  "description" : "Token for authentication.",
-  "required" : false,
-  "type" : "string"
-},
-        
-        {
-  "name" : "key",
-  "in" : "query",
-  "description" : "Api key for the user to filter.",
-  "required" : false,
-  "type" : "string"
-},
-        
-        {
-  "name" : "job_id",
-  "in" : "path",
-  "description" : "ID of job that needs to be fetched",
-  "required" : true,
-  "type" : "string"
-}
-        
-      ],
-      "responses": {
-        
-        "200": {
-  "description" : "Downloads the binary for the file.",
-  "schema" : {
-    "type" : "array",
-    "items" : {
-      "$ref" : "#/definitions/InputFile"
-    }
-  }
-}
-        ,
-        
-        "401": {
-  "description" : "No API key or invalid API key given.",
-  "schema" : {
-    "$ref" : "#/definitions/Error"
-  }
-}
-        ,
-        
-        "404": {
-  "description" : "The specified job does not exists.",
-  "schema" : {
-    "$ref" : "#/definitions/Error"
-  }
-}
-        
-        
-      }
-    }
-  } ,
-  
-  "/jobs/{job_id}/input": {
-    "post": {
-      "x-swagger-router-controller": "Input",
-      "tags": ["Input"],
-      "operationId": "jobsJobIdInputPost",
-      "parameters": [
-        
-        {
-  "in" : "body",
-  "name" : "body",
-  "required" : false,
-  "schema" : {
-    "$ref" : "#/definitions/InputFile"
-  }
-},
-        
-        {
-  "name" : "token",
-  "in" : "header",
-  "description" : "Token for authentication.",
-  "required" : false,
-  "type" : "string"
-},
-        
-        {
-  "name" : "key",
-  "in" : "query",
-  "description" : "Api key for the user to filter.",
-  "required" : false,
-  "type" : "string"
-},
-        
-        {
-  "name" : "job_id",
-  "in" : "path",
-  "description" : "ID of job that needs to be fetched",
-  "required" : true,
-  "type" : "string"
-}
-        
-      ],
-      "responses": {
-        
-        "201": {
-  "description" : "The created conversion.",
-  "schema" : {
-    "$ref" : "#/definitions/InputFile"
-  }
-}
-        ,
-        
-        "401": {
-  "description" : "No API key or invalid API key given.",
-  "schema" : {
-    "$ref" : "#/definitions/Error"
-  }
-}
-        ,
-        
-        "404": {
-  "description" : "The specified job does not exists.",
-  "schema" : {
-    "$ref" : "#/definitions/Error"
-  }
-}
-        
-        
-      }
-    }
-  } ,
-  
-  "/jobs/{job_id}/input/{file_id}": {
-    "get": {
-      "x-swagger-router-controller": "Input",
-      "tags": ["Input"],
-      "operationId": "jobsJobIdInputFileIdGet",
-      "parameters": [
-        
-        {
-  "name" : "token",
-  "in" : "header",
-  "description" : "Token for authentication.",
-  "required" : false,
-  "type" : "string"
-},
-        
-        {
-  "name" : "key",
-  "in" : "query",
-  "description" : "Api key for the user to filter.",
-  "required" : false,
-  "type" : "string"
-},
-        
-        {
-  "name" : "job_id",
-  "in" : "path",
-  "description" : "ID of job that needs to be fetched",
-  "required" : true,
-  "type" : "string"
-},
-        
-        {
-  "name" : "file_id",
-  "in" : "path",
-  "description" : "Id of the file to download",
-  "required" : true,
-  "type" : "string"
-}
-        
-      ],
-      "responses": {
-        
-        "200": {
-  "description" : "Get a file for the current job",
-  "schema" : {
-    "$ref" : "#/definitions/InputFile"
-  }
-}
-        ,
-        
-        "401": {
-  "description" : "No API key or invalid API key given.",
-  "schema" : {
-    "$ref" : "#/definitions/Error"
-  }
-}
-        ,
-        
-        "404": {
-  "description" : "The specified job does not exists.",
-  "schema" : {
-    "$ref" : "#/definitions/Error"
-  }
-}
-        
-        
-      }
-    }
-  } ,
-  
-  "/jobs/{job_id}/input/{file_id}": {
-    "delete": {
-      "x-swagger-router-controller": "Input",
-      "tags": ["Input"],
-      "operationId": "jobsJobIdInputFileIdDelete",
-      "parameters": [
-        
-        {
-  "name" : "token",
-  "in" : "header",
-  "description" : "Token for authentication.",
-  "required" : false,
-  "type" : "string"
-},
-        
-        {
-  "name" : "key",
-  "in" : "query",
-  "description" : "Api key for the user to filter.",
-  "required" : false,
-  "type" : "string"
-},
-        
-        {
-  "name" : "job_id",
-  "in" : "path",
-  "description" : "ID of job that needs to be fetched",
-  "required" : true,
-  "type" : "string"
-},
-        
-        {
-  "name" : "file_id",
-  "in" : "path",
-  "description" : "Id of the file to download",
-  "required" : true,
-  "type" : "string"
-}
-        
-      ],
-      "responses": {
-        
-        "200": {
-  "description" : "Get the removed file for the current job.",
-  "schema" : {
-    "$ref" : "#/definitions/InputFile"
-  }
-}
-        ,
-        
-        "401": {
-  "description" : "No API key or invalid API key given.",
-  "schema" : {
-    "$ref" : "#/definitions/Error"
-  }
-}
-        ,
-        
-        "404": {
-  "description" : "The specified job does not exists.",
-  "schema" : {
-    "$ref" : "#/definitions/Error"
-  }
-}
-        
-        
-      }
-    }
-  } 
-  
-   ,
-  
-  "/jobs": {
-    "get": {
-      "x-swagger-router-controller": "Jobs",
-      "tags": ["Jobs"],
-      "operationId": "jobsGet",
-      "parameters": [
-        
-        {
-  "name" : "status",
-  "in" : "query",
-  "description" : "Filter the status of the job.",
-  "required" : false,
-  "type" : "string"
-},
-        
-        {
-  "name" : "token",
-  "in" : "header",
-  "description" : "Token for authentication.",
-  "required" : false,
-  "type" : "string"
-},
-        
-        {
-  "name" : "key",
-  "in" : "query",
-  "description" : "Api key for the user to filter.",
-  "required" : false,
-  "type" : "string"
-},
-        
-        {
-  "name" : "page",
-  "in" : "query",
-  "description" : "Pagination for list of elements.",
-  "required" : false,
-  "type" : "number",
-  "default" : "1"
-}
-        
-      ],
-      "responses": {
-        
-        "200": {
-  "description" : "Gets the newly created job info",
-  "schema" : {
-    "type" : "array",
-    "items" : {
-      "$ref" : "#/definitions/Job"
-    }
-  }
-}
-        ,
-        
-        "401": {
-  "description" : "No API key or invalid API key given.",
-  "schema" : {
-    "$ref" : "#/definitions/Error"
-  }
-}
-        ,
-        
-        "400": {
-  "description" : "Invalid input.",
-  "schema" : {
-    "$ref" : "#/definitions/Error"
-  }
-}
-        
-        
-      }
-    }
-  } ,
-  
-  "/jobs": {
-    "post": {
-      "x-swagger-router-controller": "Jobs",
-      "tags": ["Jobs"],
-      "operationId": "jobsPost",
-      "parameters": [
-        
-        {
-  "name" : "key",
-  "in" : "query",
-  "description" : "Api key for the user to filter.",
-  "required" : true,
-  "type" : "string"
-},
-        
-        {
-  "in" : "body",
-  "name" : "body",
-  "description" : "Content of the job.",
-  "required" : true,
-  "schema" : {
-    "$ref" : "#/definitions/Job"
-  }
-}
-        
-      ],
-      "responses": {
-        
-        "201": {
-  "description" : "Gets the newly created job info",
-  "schema" : {
-    "$ref" : "#/definitions/Job"
-  }
-}
-        ,
-        
-        "204": {
-  "description" : "The JSON body is empty.",
-  "schema" : {
-    "$ref" : "#/definitions/Error"
-  }
-}
-        ,
-        
-        "400": {
-  "description" : "Invalid input.",
-  "schema" : {
-    "$ref" : "#/definitions/Error"
-  }
-}
-        ,
-        
-        "429": {
-  "description" : "Too many concurrent requests.",
-  "schema" : {
-    "$ref" : "#/definitions/Error"
-  }
-}
-        ,
-        
-        "500": {
-  "description" : "Server not available.",
-  "schema" : {
-    "$ref" : "#/definitions/Error"
-  }
-}
-        
-        
-      }
-    }
-  } ,
-  
-  "/jobs/{job_id}": {
-    "get": {
-      "x-swagger-router-controller": "Jobs",
-      "tags": ["Jobs"],
-      "operationId": "jobsJobIdGet",
-      "parameters": [
-        
-        {
-  "name" : "token",
-  "in" : "header",
-  "description" : "Token for authentication.",
-  "required" : false,
-  "type" : "string"
-},
-        
-        {
-  "name" : "key",
-  "in" : "query",
-  "description" : "Api key for the user to filter.",
-  "required" : false,
-  "type" : "string"
-},
-        
-        {
-  "name" : "job_id",
-  "in" : "path",
-  "description" : "ID of job that needs to be fetched",
-  "required" : true,
-  "type" : "string"
-}
-        
-      ],
-      "responses": {
-        
-        "200": {
-  "description" : "Get information about a Job",
-  "schema" : {
-    "$ref" : "#/definitions/Job"
-  }
-}
-        ,
-        
-        "401": {
-  "description" : "No API key or invalid API key given.",
-  "schema" : {
-    "$ref" : "#/definitions/Error"
-  }
-}
-        ,
-        
-        "404": {
-  "description" : "The specified job does not exists.",
-  "schema" : {
-    "$ref" : "#/definitions/Error"
-  }
-}
-        
-        
-      }
-    }
-  } ,
-  
-  "/jobs/{job_id}": {
-    "delete": {
-      "x-swagger-router-controller": "Jobs",
-      "tags": ["Jobs"],
-      "operationId": "jobsJobIdDelete",
-      "parameters": [
-        
-        {
-  "name" : "token",
-  "in" : "header",
-  "description" : "Token for authentication.",
-  "required" : false,
-  "type" : "string"
-},
-        
-        {
-  "name" : "key",
-  "in" : "query",
-  "description" : "Api key for the user to filter.",
-  "required" : false,
-  "type" : "string"
-},
-        
-        {
-  "name" : "job_id",
-  "in" : "path",
-  "description" : "ID of job that needs to be fetched",
-  "required" : true,
-  "type" : "string"
-}
-        
-      ],
-      "responses": {
-        
-        "200": {
-  "description" : "Get information about the removed Job.",
-  "schema" : {
-    "$ref" : "#/definitions/Job"
-  }
-}
-        ,
-        
-        "401": {
-  "description" : "No API key or invalid API key given.",
-  "schema" : {
-    "$ref" : "#/definitions/Error"
-  }
-}
-        ,
-        
-        "404": {
-  "description" : "The specified job does not exists.",
-  "schema" : {
-    "$ref" : "#/definitions/Error"
-  }
-}
-        
-        
-      }
-    }
-  } ,
-  
-  "/jobs/{job_id}": {
-    "patch": {
-      "x-swagger-router-controller": "Jobs",
-      "tags": ["Jobs"],
-      "operationId": "jobsJobIdPatch",
-      "parameters": [
-        
-        {
-  "in" : "body",
-  "name" : "body",
-  "description" : "Content of the job.",
-  "required" : true,
-  "schema" : {
-    "$ref" : "#/definitions/Job"
-  }
-},
-        
-        {
-  "name" : "token",
-  "in" : "header",
-  "description" : "Token for authentication.",
-  "required" : false,
-  "type" : "string"
-},
-        
-        {
-  "name" : "key",
-  "in" : "query",
-  "description" : "Api key for the user to filter.",
-  "required" : false,
-  "type" : "string"
-},
-        
-        {
-  "name" : "job_id",
-  "in" : "path",
-  "description" : "ID of job that needs to be fetched",
-  "required" : true,
-  "type" : "string"
-}
-        
-      ],
-      "responses": {
-        
-        "200": {
-  "description" : "Get information about the removed Job",
-  "schema" : {
-    "$ref" : "#/definitions/Job"
-  }
-}
-        ,
-        
-        "409": {
-  "description" : "The status of the job could not be changed since it is in a invalid status.",
-  "schema" : {
-    "$ref" : "#/definitions/Error"
-  }
-}
-        ,
-        
-        "401": {
-  "description" : "No API key or invalid API key given.",
-  "schema" : {
-    "$ref" : "#/definitions/Error"
-  }
-}
-        ,
-        
-        "404": {
-  "description" : "The specified job does not exists.",
-  "schema" : {
-    "$ref" : "#/definitions/Error"
-  }
-}
-        
-        
-      }
-    }
-  } ,
-  
-  "/jobs/{job_id}/threads": {
-    "get": {
-      "x-swagger-router-controller": "Jobs",
-      "tags": ["Jobs"],
-      "operationId": "jobsJobIdThreadsGet",
-      "parameters": [
-        
-        {
-  "name" : "token",
-  "in" : "header",
-  "description" : "Token for authentication.",
-  "required" : false,
-  "type" : "string"
-},
-        
-        {
-  "name" : "key",
-  "in" : "query",
-  "description" : "Api key for the user to filter.",
-  "required" : false,
-  "type" : "string"
-},
-        
-        {
-  "name" : "job_id",
-  "in" : "path",
-  "description" : "ID of job that needs to be fetched",
-  "required" : true,
-  "type" : "string"
-}
-        
-      ],
-      "responses": {
-        
-        "200": {
-  "description" : "Get a list of all threads currently being processed.",
-  "schema" : {
-    "type" : "array",
-    "items" : {
-      "$ref" : "#/definitions/Thread"
-    }
-  }
-}
-        ,
-        
-        "401": {
-  "description" : "No API key or invalid API key given.",
-  "schema" : {
-    "$ref" : "#/definitions/Error"
-  }
-}
-        ,
-        
-        "404": {
-  "description" : "The specified job does not exists.",
-  "schema" : {
-    "$ref" : "#/definitions/Error"
-  }
-}
-        
-        
-      }
-    }
-  } 
-  
-   ,
-  
-  "/jobs/{job_id}/output": {
-    "get": {
-      "x-swagger-router-controller": "Output",
-      "tags": ["Output"],
-      "operationId": "jobsJobIdOutputGet",
-      "parameters": [
-        
-        {
-  "name" : "conversion_id",
-  "in" : "query",
-  "required" : false,
-  "type" : "string"
-},
-        
-        {
-  "name" : "input_id",
-  "in" : "query",
-  "required" : false,
-  "type" : "string"
-},
-        
-        {
-  "name" : "token",
-  "in" : "header",
-  "description" : "Token for authentication.",
-  "required" : false,
-  "type" : "string"
-},
-        
-        {
-  "name" : "key",
-  "in" : "query",
-  "description" : "Api key for the user to filter.",
-  "required" : false,
-  "type" : "string"
-},
-        
-        {
-  "name" : "job_id",
-  "in" : "path",
-  "description" : "ID of job that needs to be fetched",
-  "required" : true,
-  "type" : "string"
-}
-        
-      ],
-      "responses": {
-        
-        "200": {
-  "description" : "Downloads the binary for the file",
-  "schema" : {
-    "type" : "array",
-    "items" : {
-      "$ref" : "#/definitions/OutputFile"
-    }
-  }
-}
-        ,
-        
-        "401": {
-  "description" : "No API key or invalid API key given.",
-  "schema" : {
-    "$ref" : "#/definitions/Error"
-  }
-}
-        ,
-        
-        "404": {
-  "description" : "The specified job does not exists.",
-  "schema" : {
-    "$ref" : "#/definitions/Error"
-  }
-}
-        
-        
-      }
-    }
-  } ,
-  
-  "/jobs/{job_id}/output/{file_id}": {
-    "get": {
-      "x-swagger-router-controller": "Output",
-      "tags": ["Output"],
-      "operationId": "jobsJobIdOutputFileIdGet",
-      "parameters": [
-        
-        {
-  "name" : "token",
-  "in" : "header",
-  "description" : "Token for authentication.",
-  "required" : false,
-  "type" : "string"
-},
-        
-        {
-  "name" : "key",
-  "in" : "query",
-  "description" : "Api key for the user to filter.",
-  "required" : false,
-  "type" : "string"
-},
-        
-        {
-  "name" : "job_id",
-  "in" : "path",
-  "description" : "ID of job that needs to be fetched",
-  "required" : true,
-  "type" : "string"
-},
-        
-        {
-  "name" : "file_id",
-  "in" : "path",
-  "description" : "Id of the file to download",
-  "required" : true,
-  "type" : "string"
-}
-        
-      ],
-      "responses": {
-        
-        "200": {
-  "description" : "Gets the information for the file.",
-  "schema" : {
-    "type" : "array",
-    "items" : {
-      "$ref" : "#/definitions/OutputFile"
-    }
-  }
-}
-        ,
-        
-        "401": {
-  "description" : "No API key or invalid API key given.",
-  "schema" : {
-    "$ref" : "#/definitions/Error"
-  }
-}
-        ,
-        
-        "404": {
-  "description" : "The specified job does not exists.",
-  "schema" : {
-    "$ref" : "#/definitions/Error"
-  }
-}
-        
-        
-      }
-    }
-  } ,
-  
-  "/jobs/{job_id}/output/{file_id}": {
-    "delete": {
-      "x-swagger-router-controller": "Output",
-      "tags": ["Output"],
-      "operationId": "jobsJobIdOutputFileIdDelete",
-      "parameters": [
-        
-        {
-  "name" : "token",
-  "in" : "header",
-  "description" : "Token for authentication.",
-  "required" : false,
-  "type" : "string"
-},
-        
-        {
-  "name" : "key",
-  "in" : "query",
-  "description" : "Api key for the user to filter.",
-  "required" : false,
-  "type" : "string"
-},
-        
-        {
-  "name" : "job_id",
-  "in" : "path",
-  "description" : "ID of job that needs to be fetched",
-  "required" : true,
-  "type" : "string"
-},
-        
-        {
-  "name" : "file_id",
-  "in" : "path",
-  "description" : "Id of the file to download",
-  "required" : true,
-  "type" : "string"
-}
-        
-      ],
-      "responses": {
-        
-        "200": {
-  "description" : "Gets the information for the deleted file.",
-  "schema" : {
-    "type" : "array",
-    "items" : {
-      "$ref" : "#/definitions/OutputFile"
-    }
-  }
-}
-        ,
-        
-        "401": {
-  "description" : "No API key or invalid API key given.",
-  "schema" : {
-    "$ref" : "#/definitions/Error"
-  }
-}
-        ,
-        
-        "404": {
-  "description" : "The specified job does not exists.",
-  "schema" : {
-    "$ref" : "#/definitions/Error"
-  }
-}
-        
-        
-      }
-    }
-  } 
-  
-   ,
   
   "/conversions": {
     "get": {
@@ -1006,6 +84,928 @@
   
    ,
   
+  "/jobs/{job_id}/input": {
+    "get": {
+      "x-swagger-router-controller": "Input",
+      "tags": ["Input"],
+      "operationId": "jobsJobIdInputGet",
+      "parameters": [
+        
+        {
+  "name" : "X-Oc-Token",
+  "in" : "header",
+  "description" : "Token for authentication for the current job",
+  "required" : false,
+  "type" : "string"
+},
+        
+        {
+  "name" : "X-Oc-Api-Key",
+  "in" : "header",
+  "description" : "Api key for the user to filter.",
+  "required" : false,
+  "type" : "string"
+},
+        
+        {
+  "name" : "job_id",
+  "in" : "path",
+  "description" : "ID of job that needs to be fetched",
+  "required" : true,
+  "type" : "string"
+}
+        
+      ],
+      "responses": {
+        
+        "200": {
+  "description" : "Downloads the binary for the file.",
+  "schema" : {
+    "type" : "array",
+    "items" : {
+      "$ref" : "#/definitions/InputFile"
+    }
+  }
+}
+        ,
+        
+        "401": {
+  "description" : "No API key or invalid API key given.",
+  "schema" : {
+    "$ref" : "#/definitions/Error"
+  }
+}
+        ,
+        
+        "404": {
+  "description" : "The specified job does not exists.",
+  "schema" : {
+    "$ref" : "#/definitions/Error"
+  }
+}
+        
+        
+      }
+    }
+  } ,
+  
+  "/jobs/{job_id}/input": {
+    "post": {
+      "x-swagger-router-controller": "Input",
+      "tags": ["Input"],
+      "operationId": "jobsJobIdInputPost",
+      "parameters": [
+        
+        {
+  "in" : "body",
+  "name" : "body",
+  "required" : false,
+  "schema" : {
+    "$ref" : "#/definitions/InputFile"
+  }
+},
+        
+        {
+  "name" : "X-Oc-Token",
+  "in" : "header",
+  "description" : "Token for authentication for the current job",
+  "required" : false,
+  "type" : "string"
+},
+        
+        {
+  "name" : "X-Oc-Api-Key",
+  "in" : "header",
+  "description" : "Api key for the user to filter.",
+  "required" : false,
+  "type" : "string"
+},
+        
+        {
+  "name" : "job_id",
+  "in" : "path",
+  "description" : "ID of job that needs to be fetched",
+  "required" : true,
+  "type" : "string"
+}
+        
+      ],
+      "responses": {
+        
+        "201": {
+  "description" : "The created conversion.",
+  "schema" : {
+    "$ref" : "#/definitions/InputFile"
+  }
+}
+        ,
+        
+        "401": {
+  "description" : "No API key or invalid API key given.",
+  "schema" : {
+    "$ref" : "#/definitions/Error"
+  }
+}
+        ,
+        
+        "404": {
+  "description" : "The specified job does not exists.",
+  "schema" : {
+    "$ref" : "#/definitions/Error"
+  }
+}
+        
+        
+      }
+    }
+  } ,
+  
+  "/jobs/{job_id}/input/{file_id}": {
+    "get": {
+      "x-swagger-router-controller": "Input",
+      "tags": ["Input"],
+      "operationId": "jobsJobIdInputFileIdGet",
+      "parameters": [
+        
+        {
+  "name" : "X-Oc-Token",
+  "in" : "header",
+  "description" : "Token for authentication for the current job",
+  "required" : false,
+  "type" : "string"
+},
+        
+        {
+  "name" : "X-Oc-Api-Key",
+  "in" : "header",
+  "description" : "Api key for the user to filter.",
+  "required" : false,
+  "type" : "string"
+},
+        
+        {
+  "name" : "job_id",
+  "in" : "path",
+  "description" : "ID of job that needs to be fetched",
+  "required" : true,
+  "type" : "string"
+},
+        
+        {
+  "name" : "file_id",
+  "in" : "path",
+  "description" : "Id of the file to download",
+  "required" : true,
+  "type" : "string"
+}
+        
+      ],
+      "responses": {
+        
+        "200": {
+  "description" : "Get a file for the current job",
+  "schema" : {
+    "$ref" : "#/definitions/InputFile"
+  }
+}
+        ,
+        
+        "401": {
+  "description" : "No API key or invalid API key given.",
+  "schema" : {
+    "$ref" : "#/definitions/Error"
+  }
+}
+        ,
+        
+        "404": {
+  "description" : "The specified job does not exists.",
+  "schema" : {
+    "$ref" : "#/definitions/Error"
+  }
+}
+        
+        
+      }
+    }
+  } ,
+  
+  "/jobs/{job_id}/input/{file_id}": {
+    "delete": {
+      "x-swagger-router-controller": "Input",
+      "tags": ["Input"],
+      "operationId": "jobsJobIdInputFileIdDelete",
+      "parameters": [
+        
+        {
+  "name" : "X-Oc-Token",
+  "in" : "header",
+  "description" : "Token for authentication for the current job",
+  "required" : false,
+  "type" : "string"
+},
+        
+        {
+  "name" : "X-Oc-Api-Key",
+  "in" : "header",
+  "description" : "Api key for the user to filter.",
+  "required" : false,
+  "type" : "string"
+},
+        
+        {
+  "name" : "job_id",
+  "in" : "path",
+  "description" : "ID of job that needs to be fetched",
+  "required" : true,
+  "type" : "string"
+},
+        
+        {
+  "name" : "file_id",
+  "in" : "path",
+  "description" : "Id of the file to download",
+  "required" : true,
+  "type" : "string"
+}
+        
+      ],
+      "responses": {
+        
+        "200": {
+  "description" : "Get the removed file for the current job.",
+  "schema" : {
+    "$ref" : "#/definitions/InputFile"
+  }
+}
+        ,
+        
+        "401": {
+  "description" : "No API key or invalid API key given.",
+  "schema" : {
+    "$ref" : "#/definitions/Error"
+  }
+}
+        ,
+        
+        "404": {
+  "description" : "The specified job does not exists.",
+  "schema" : {
+    "$ref" : "#/definitions/Error"
+  }
+}
+        
+        
+      }
+    }
+  } 
+  
+   ,
+  
+  "/jobs": {
+    "get": {
+      "x-swagger-router-controller": "Jobs",
+      "tags": ["Jobs"],
+      "operationId": "jobsGet",
+      "parameters": [
+        
+        {
+  "name" : "status",
+  "in" : "query",
+  "description" : "Filter the status of the job.",
+  "required" : false,
+  "type" : "string"
+},
+        
+        {
+  "name" : "X-Oc-Token",
+  "in" : "header",
+  "description" : "Token for authentication for the current job",
+  "required" : false,
+  "type" : "string"
+},
+        
+        {
+  "name" : "X-Oc-Api-Key",
+  "in" : "header",
+  "description" : "Api key for the user to filter.",
+  "required" : false,
+  "type" : "string"
+},
+        
+        {
+  "name" : "page",
+  "in" : "query",
+  "description" : "Pagination for list of elements.",
+  "required" : false,
+  "type" : "number",
+  "default" : "1"
+}
+        
+      ],
+      "responses": {
+        
+        "200": {
+  "description" : "Gets the newly created job info",
+  "schema" : {
+    "type" : "array",
+    "items" : {
+      "$ref" : "#/definitions/Job"
+    }
+  }
+}
+        ,
+        
+        "401": {
+  "description" : "No API key or invalid API key given.",
+  "schema" : {
+    "$ref" : "#/definitions/Error"
+  }
+}
+        ,
+        
+        "400": {
+  "description" : "Invalid input.",
+  "schema" : {
+    "$ref" : "#/definitions/Error"
+  }
+}
+        
+        
+      }
+    }
+  } ,
+  
+  "/jobs": {
+    "post": {
+      "x-swagger-router-controller": "Jobs",
+      "tags": ["Jobs"],
+      "operationId": "jobsPost",
+      "parameters": [
+        
+        {
+  "name" : "X-Oc-Api-Key",
+  "in" : "header",
+  "description" : "Api key for the user to filter.",
+  "required" : true,
+  "type" : "string"
+},
+        
+        {
+  "in" : "body",
+  "name" : "body",
+  "description" : "Content of the job.",
+  "required" : true,
+  "schema" : {
+    "$ref" : "#/definitions/Job"
+  }
+}
+        
+      ],
+      "responses": {
+        
+        "201": {
+  "description" : "Gets the newly created job info",
+  "schema" : {
+    "$ref" : "#/definitions/Job"
+  }
+}
+        ,
+        
+        "204": {
+  "description" : "The JSON body is empty.",
+  "schema" : {
+    "$ref" : "#/definitions/Error"
+  }
+}
+        ,
+        
+        "400": {
+  "description" : "Invalid input.",
+  "schema" : {
+    "$ref" : "#/definitions/Error"
+  }
+}
+        ,
+        
+        "429": {
+  "description" : "Too many concurrent requests.",
+  "schema" : {
+    "$ref" : "#/definitions/Error"
+  }
+}
+        ,
+        
+        "500": {
+  "description" : "Server not available.",
+  "schema" : {
+    "$ref" : "#/definitions/Error"
+  }
+}
+        
+        
+      }
+    }
+  } ,
+  
+  "/jobs/{job_id}": {
+    "get": {
+      "x-swagger-router-controller": "Jobs",
+      "tags": ["Jobs"],
+      "operationId": "jobsJobIdGet",
+      "parameters": [
+        
+        {
+  "name" : "X-Oc-Token",
+  "in" : "header",
+  "description" : "Token for authentication for the current job",
+  "required" : false,
+  "type" : "string"
+},
+        
+        {
+  "name" : "X-Oc-Api-Key",
+  "in" : "header",
+  "description" : "Api key for the user to filter.",
+  "required" : false,
+  "type" : "string"
+},
+        
+        {
+  "name" : "job_id",
+  "in" : "path",
+  "description" : "ID of job that needs to be fetched",
+  "required" : true,
+  "type" : "string"
+}
+        
+      ],
+      "responses": {
+        
+        "200": {
+  "description" : "Get information about a Job",
+  "schema" : {
+    "$ref" : "#/definitions/Job"
+  }
+}
+        ,
+        
+        "401": {
+  "description" : "No API key or invalid API key given.",
+  "schema" : {
+    "$ref" : "#/definitions/Error"
+  }
+}
+        ,
+        
+        "404": {
+  "description" : "The specified job does not exists.",
+  "schema" : {
+    "$ref" : "#/definitions/Error"
+  }
+}
+        
+        
+      }
+    }
+  } ,
+  
+  "/jobs/{job_id}": {
+    "delete": {
+      "x-swagger-router-controller": "Jobs",
+      "tags": ["Jobs"],
+      "operationId": "jobsJobIdDelete",
+      "parameters": [
+        
+        {
+  "name" : "X-Oc-Token",
+  "in" : "header",
+  "description" : "Token for authentication for the current job",
+  "required" : false,
+  "type" : "string"
+},
+        
+        {
+  "name" : "X-Oc-Api-Key",
+  "in" : "header",
+  "description" : "Api key for the user to filter.",
+  "required" : false,
+  "type" : "string"
+},
+        
+        {
+  "name" : "job_id",
+  "in" : "path",
+  "description" : "ID of job that needs to be fetched",
+  "required" : true,
+  "type" : "string"
+}
+        
+      ],
+      "responses": {
+        
+        "200": {
+  "description" : "Get information about the removed Job.",
+  "schema" : {
+    "$ref" : "#/definitions/Job"
+  }
+}
+        ,
+        
+        "401": {
+  "description" : "No API key or invalid API key given.",
+  "schema" : {
+    "$ref" : "#/definitions/Error"
+  }
+}
+        ,
+        
+        "404": {
+  "description" : "The specified job does not exists.",
+  "schema" : {
+    "$ref" : "#/definitions/Error"
+  }
+}
+        
+        
+      }
+    }
+  } ,
+  
+  "/jobs/{job_id}": {
+    "patch": {
+      "x-swagger-router-controller": "Jobs",
+      "tags": ["Jobs"],
+      "operationId": "jobsJobIdPatch",
+      "parameters": [
+        
+        {
+  "in" : "body",
+  "name" : "body",
+  "description" : "Content of the job.",
+  "required" : true,
+  "schema" : {
+    "$ref" : "#/definitions/Job"
+  }
+},
+        
+        {
+  "name" : "X-Oc-Token",
+  "in" : "header",
+  "description" : "Token for authentication for the current job",
+  "required" : false,
+  "type" : "string"
+},
+        
+        {
+  "name" : "X-Oc-Api-Key",
+  "in" : "header",
+  "description" : "Api key for the user to filter.",
+  "required" : false,
+  "type" : "string"
+},
+        
+        {
+  "name" : "job_id",
+  "in" : "path",
+  "description" : "ID of job that needs to be fetched",
+  "required" : true,
+  "type" : "string"
+}
+        
+      ],
+      "responses": {
+        
+        "200": {
+  "description" : "Get information about the removed Job",
+  "schema" : {
+    "$ref" : "#/definitions/Job"
+  }
+}
+        ,
+        
+        "409": {
+  "description" : "The status of the job could not be changed since it is in a invalid status.",
+  "schema" : {
+    "$ref" : "#/definitions/Error"
+  }
+}
+        ,
+        
+        "401": {
+  "description" : "No API key or invalid API key given.",
+  "schema" : {
+    "$ref" : "#/definitions/Error"
+  }
+}
+        ,
+        
+        "404": {
+  "description" : "The specified job does not exists.",
+  "schema" : {
+    "$ref" : "#/definitions/Error"
+  }
+}
+        
+        
+      }
+    }
+  } ,
+  
+  "/jobs/{job_id}/threads": {
+    "get": {
+      "x-swagger-router-controller": "Jobs",
+      "tags": ["Jobs"],
+      "operationId": "jobsJobIdThreadsGet",
+      "parameters": [
+        
+        {
+  "name" : "X-Oc-Token",
+  "in" : "header",
+  "description" : "Token for authentication for the current job",
+  "required" : false,
+  "type" : "string"
+},
+        
+        {
+  "name" : "X-Oc-Api-Key",
+  "in" : "header",
+  "description" : "Api key for the user to filter.",
+  "required" : false,
+  "type" : "string"
+},
+        
+        {
+  "name" : "job_id",
+  "in" : "path",
+  "description" : "ID of job that needs to be fetched",
+  "required" : true,
+  "type" : "string"
+}
+        
+      ],
+      "responses": {
+        
+        "200": {
+  "description" : "Get a list of all threads currently being processed.",
+  "schema" : {
+    "type" : "array",
+    "items" : {
+      "$ref" : "#/definitions/Thread"
+    }
+  }
+}
+        ,
+        
+        "401": {
+  "description" : "No API key or invalid API key given.",
+  "schema" : {
+    "$ref" : "#/definitions/Error"
+  }
+}
+        ,
+        
+        "404": {
+  "description" : "The specified job does not exists.",
+  "schema" : {
+    "$ref" : "#/definitions/Error"
+  }
+}
+        
+        
+      }
+    }
+  } 
+  
+   ,
+  
+  "/jobs/{job_id}/output": {
+    "get": {
+      "x-swagger-router-controller": "Output",
+      "tags": ["Output"],
+      "operationId": "jobsJobIdOutputGet",
+      "parameters": [
+        
+        {
+  "name" : "conversion_id",
+  "in" : "query",
+  "required" : false,
+  "type" : "string"
+},
+        
+        {
+  "name" : "input_id",
+  "in" : "query",
+  "required" : false,
+  "type" : "string"
+},
+        
+        {
+  "name" : "X-Oc-Token",
+  "in" : "header",
+  "description" : "Token for authentication for the current job",
+  "required" : false,
+  "type" : "string"
+},
+        
+        {
+  "name" : "X-Oc-Api-Key",
+  "in" : "header",
+  "description" : "Api key for the user to filter.",
+  "required" : false,
+  "type" : "string"
+},
+        
+        {
+  "name" : "job_id",
+  "in" : "path",
+  "description" : "ID of job that needs to be fetched",
+  "required" : true,
+  "type" : "string"
+}
+        
+      ],
+      "responses": {
+        
+        "200": {
+  "description" : "Downloads the binary for the file",
+  "schema" : {
+    "type" : "array",
+    "items" : {
+      "$ref" : "#/definitions/OutputFile"
+    }
+  }
+}
+        ,
+        
+        "401": {
+  "description" : "No API key or invalid API key given.",
+  "schema" : {
+    "$ref" : "#/definitions/Error"
+  }
+}
+        ,
+        
+        "404": {
+  "description" : "The specified job does not exists.",
+  "schema" : {
+    "$ref" : "#/definitions/Error"
+  }
+}
+        
+        
+      }
+    }
+  } ,
+  
+  "/jobs/{job_id}/output/{file_id}": {
+    "get": {
+      "x-swagger-router-controller": "Output",
+      "tags": ["Output"],
+      "operationId": "jobsJobIdOutputFileIdGet",
+      "parameters": [
+        
+        {
+  "name" : "X-Oc-Token",
+  "in" : "header",
+  "description" : "Token for authentication for the current job",
+  "required" : false,
+  "type" : "string"
+},
+        
+        {
+  "name" : "X-Oc-Api-Key",
+  "in" : "header",
+  "description" : "Api key for the user to filter.",
+  "required" : false,
+  "type" : "string"
+},
+        
+        {
+  "name" : "job_id",
+  "in" : "path",
+  "description" : "ID of job that needs to be fetched",
+  "required" : true,
+  "type" : "string"
+},
+        
+        {
+  "name" : "file_id",
+  "in" : "path",
+  "description" : "Id of the file to download",
+  "required" : true,
+  "type" : "string"
+}
+        
+      ],
+      "responses": {
+        
+        "200": {
+  "description" : "Gets the information for the file.",
+  "schema" : {
+    "type" : "array",
+    "items" : {
+      "$ref" : "#/definitions/OutputFile"
+    }
+  }
+}
+        ,
+        
+        "401": {
+  "description" : "No API key or invalid API key given.",
+  "schema" : {
+    "$ref" : "#/definitions/Error"
+  }
+}
+        ,
+        
+        "404": {
+  "description" : "The specified job does not exists.",
+  "schema" : {
+    "$ref" : "#/definitions/Error"
+  }
+}
+        
+        
+      }
+    }
+  } ,
+  
+  "/jobs/{job_id}/output/{file_id}": {
+    "delete": {
+      "x-swagger-router-controller": "Output",
+      "tags": ["Output"],
+      "operationId": "jobsJobIdOutputFileIdDelete",
+      "parameters": [
+        
+        {
+  "name" : "X-Oc-Token",
+  "in" : "header",
+  "description" : "Token for authentication for the current job",
+  "required" : false,
+  "type" : "string"
+},
+        
+        {
+  "name" : "X-Oc-Api-Key",
+  "in" : "header",
+  "description" : "Api key for the user to filter.",
+  "required" : false,
+  "type" : "string"
+},
+        
+        {
+  "name" : "job_id",
+  "in" : "path",
+  "description" : "ID of job that needs to be fetched",
+  "required" : true,
+  "type" : "string"
+},
+        
+        {
+  "name" : "file_id",
+  "in" : "path",
+  "description" : "Id of the file to download",
+  "required" : true,
+  "type" : "string"
+}
+        
+      ],
+      "responses": {
+        
+        "200": {
+  "description" : "Gets the information for the deleted file.",
+  "schema" : {
+    "type" : "array",
+    "items" : {
+      "$ref" : "#/definitions/OutputFile"
+    }
+  }
+}
+        ,
+        
+        "401": {
+  "description" : "No API key or invalid API key given.",
+  "schema" : {
+    "$ref" : "#/definitions/Error"
+  }
+}
+        ,
+        
+        "404": {
+  "description" : "The specified job does not exists.",
+  "schema" : {
+    "$ref" : "#/definitions/Error"
+  }
+}
+        
+        
+      }
+    }
+  } 
+  
+   ,
+  
   "/jobs/{job_id}/conversions": {
     "get": {
       "x-swagger-router-controller": "Conversion",
@@ -1014,16 +1014,16 @@
       "parameters": [
         
         {
-  "name" : "token",
+  "name" : "X-Oc-Token",
   "in" : "header",
-  "description" : "Token for authentication.",
+  "description" : "Token for authentication for the current job",
   "required" : false,
   "type" : "string"
 },
         
         {
-  "name" : "key",
-  "in" : "query",
+  "name" : "X-Oc-Api-Key",
+  "in" : "header",
   "description" : "Api key for the user to filter.",
   "required" : false,
   "type" : "string"
@@ -1089,16 +1089,16 @@
 },
         
         {
-  "name" : "token",
+  "name" : "X-Oc-Token",
   "in" : "header",
-  "description" : "Token for authentication.",
+  "description" : "Token for authentication for the current job",
   "required" : false,
   "type" : "string"
 },
         
         {
-  "name" : "key",
-  "in" : "query",
+  "name" : "X-Oc-Api-Key",
+  "in" : "header",
   "description" : "Api key for the user to filter.",
   "required" : false,
   "type" : "string"
@@ -1151,16 +1151,16 @@
       "parameters": [
         
         {
-  "name" : "token",
+  "name" : "X-Oc-Token",
   "in" : "header",
-  "description" : "Token for authentication.",
+  "description" : "Token for authentication for the current job",
   "required" : false,
   "type" : "string"
 },
         
         {
-  "name" : "key",
-  "in" : "query",
+  "name" : "X-Oc-Api-Key",
+  "in" : "header",
   "description" : "Api key for the user to filter.",
   "required" : false,
   "type" : "string"
@@ -1221,16 +1221,16 @@
       "parameters": [
         
         {
-  "name" : "token",
+  "name" : "X-Oc-Token",
   "in" : "header",
-  "description" : "Token for authentication.",
+  "description" : "Token for authentication for the current job",
   "required" : false,
   "type" : "string"
 },
         
         {
-  "name" : "key",
-  "in" : "query",
+  "name" : "X-Oc-Api-Key",
+  "in" : "header",
   "description" : "Api key for the user to filter.",
   "required" : false,
   "type" : "string"
@@ -1312,10 +1312,6 @@
       "type" : "boolean",
       "description" : "Determine if the job must be processed as soon as it is ready.",
       "default" : true
-    },
-    "test" : {
-      "type" : "boolean",
-      "description" : "Determine if it is a test job."
     },
     "conversion" : {
       "type" : "array",
@@ -1433,6 +1429,11 @@
   "type" : "object",
   "required" : [ "target" ],
   "properties" : {
+    "id" : {
+      "type" : "string",
+      "example" : "8daae6d1-26e0-11e5-b2a1-0800273b325b",
+      "description" : "Identifier for the job conversion."
+    },
     "target" : {
       "type" : "string",
       "example" : "mp3",
@@ -1488,16 +1489,6 @@
       "type" : "string",
       "example" : "The file is being processed.",
       "description" : "Description of the status code."
-    }
-  }
-},"Link": {
-  "required" : [ "id" ],
-  "properties" : {
-    "id" : {
-      "type" : "string"
-    },
-    "uri" : {
-      "type" : "string"
     }
   }
 },"Error": {

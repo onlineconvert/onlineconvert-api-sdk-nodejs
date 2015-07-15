@@ -1,16 +1,16 @@
 'use strict';
 
-exports.jobsJobIdOutputGet = function(conversionId, inputId, token, key, jobId) {
+exports.jobsJobIdOutputGet = function(conversionId, inputId, xOcToken, xOcApiKey, jobId) {
 
   var examples = {};
   
   examples['application/json'] = [ {
-  "filename" : "image.png",
-  "size" : "12835187",
-  "created_at" : "2015-07-08T13:32:04.015+0000",
   "id" : "43",
   "source" : "{}",
-  "uri" : "http://www3.online-convert.com"
+  "created_at" : "2015-07-15T15:11:53.313+0000",
+  "filename" : "image.png",
+  "uri" : "http://www3.online-convert.com",
+  "size" : "12835187"
 } ];
   
 
@@ -19,17 +19,17 @@ exports.jobsJobIdOutputGet = function(conversionId, inputId, token, key, jobId) 
     return examples[Object.keys(examples)[0]];
   
 }
-exports.jobsJobIdOutputFileIdGet = function(token, key, jobId, fileId) {
+exports.jobsJobIdOutputFileIdGet = function(xOcToken, xOcApiKey, jobId, fileId) {
 
   var examples = {};
   
   examples['application/json'] = [ {
-  "filename" : "image.png",
-  "size" : "12835187",
-  "created_at" : "2015-07-08T13:32:04.018+0000",
   "id" : "43",
   "source" : "{}",
-  "uri" : "http://www3.online-convert.com"
+  "created_at" : "2015-07-15T15:11:53.318+0000",
+  "filename" : "image.png",
+  "uri" : "http://www3.online-convert.com",
+  "size" : "12835187"
 } ];
   
 
@@ -38,17 +38,17 @@ exports.jobsJobIdOutputFileIdGet = function(token, key, jobId, fileId) {
     return examples[Object.keys(examples)[0]];
   
 }
-exports.jobsJobIdOutputFileIdDelete = function(token, key, jobId, fileId) {
+exports.jobsJobIdOutputFileIdDelete = function(xOcToken, xOcApiKey, jobId, fileId) {
 
   var examples = {};
   
   examples['application/json'] = [ {
-  "filename" : "image.png",
-  "size" : "12835187",
-  "created_at" : "2015-07-08T13:32:04.020+0000",
   "id" : "43",
   "source" : "{}",
-  "uri" : "http://www3.online-convert.com"
+  "created_at" : "2015-07-15T15:11:53.321+0000",
+  "filename" : "image.png",
+  "uri" : "http://www3.online-convert.com",
+  "size" : "12835187"
 } ];
   
 

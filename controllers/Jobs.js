@@ -8,12 +8,12 @@ var Jobs = require('./JobsService');
 
 module.exports.jobsGet = function jobsGet (req, res, next) {
   var status = req.swagger.params['status'].value;
-  var token = req.swagger.params['token'].value;
-  var key = req.swagger.params['key'].value;
+  var xOcToken = req.swagger.params['X-Oc-Token'].value;
+  var xOcApiKey = req.swagger.params['X-Oc-Api-Key'].value;
   var page = req.swagger.params['page'].value;
   
 
-  var result = Jobs.jobsGet(status, token, key, page);
+  var result = Jobs.jobsGet(status, xOcToken, xOcApiKey, page);
 
   if(typeof result !== 'undefined') {
     res.setHeader('Content-Type', 'application/json');
@@ -24,11 +24,11 @@ module.exports.jobsGet = function jobsGet (req, res, next) {
 };
 
 module.exports.jobsPost = function jobsPost (req, res, next) {
-  var key = req.swagger.params['key'].value;
+  var xOcApiKey = req.swagger.params['X-Oc-Api-Key'].value;
   var body = req.swagger.params['body'].value;
   
 
-  var result = Jobs.jobsPost(key, body);
+  var result = Jobs.jobsPost(xOcApiKey, body);
 
   if(typeof result !== 'undefined') {
     res.setHeader('Content-Type', 'application/json');
@@ -39,12 +39,12 @@ module.exports.jobsPost = function jobsPost (req, res, next) {
 };
 
 module.exports.jobsJobIdGet = function jobsJobIdGet (req, res, next) {
-  var token = req.swagger.params['token'].value;
-  var key = req.swagger.params['key'].value;
+  var xOcToken = req.swagger.params['X-Oc-Token'].value;
+  var xOcApiKey = req.swagger.params['X-Oc-Api-Key'].value;
   var jobId = req.swagger.params['job_id'].value;
   
 
-  var result = Jobs.jobsJobIdGet(token, key, jobId);
+  var result = Jobs.jobsJobIdGet(xOcToken, xOcApiKey, jobId);
 
   if(typeof result !== 'undefined') {
     res.setHeader('Content-Type', 'application/json');
@@ -55,12 +55,12 @@ module.exports.jobsJobIdGet = function jobsJobIdGet (req, res, next) {
 };
 
 module.exports.jobsJobIdDelete = function jobsJobIdDelete (req, res, next) {
-  var token = req.swagger.params['token'].value;
-  var key = req.swagger.params['key'].value;
+  var xOcToken = req.swagger.params['X-Oc-Token'].value;
+  var xOcApiKey = req.swagger.params['X-Oc-Api-Key'].value;
   var jobId = req.swagger.params['job_id'].value;
   
 
-  var result = Jobs.jobsJobIdDelete(token, key, jobId);
+  var result = Jobs.jobsJobIdDelete(xOcToken, xOcApiKey, jobId);
 
   if(typeof result !== 'undefined') {
     res.setHeader('Content-Type', 'application/json');
@@ -72,12 +72,12 @@ module.exports.jobsJobIdDelete = function jobsJobIdDelete (req, res, next) {
 
 module.exports.jobsJobIdPatch = function jobsJobIdPatch (req, res, next) {
   var body = req.swagger.params['body'].value;
-  var token = req.swagger.params['token'].value;
-  var key = req.swagger.params['key'].value;
+  var xOcToken = req.swagger.params['X-Oc-Token'].value;
+  var xOcApiKey = req.swagger.params['X-Oc-Api-Key'].value;
   var jobId = req.swagger.params['job_id'].value;
   
 
-  var result = Jobs.jobsJobIdPatch(body, token, key, jobId);
+  var result = Jobs.jobsJobIdPatch(body, xOcToken, xOcApiKey, jobId);
 
   if(typeof result !== 'undefined') {
     res.setHeader('Content-Type', 'application/json');
@@ -88,12 +88,12 @@ module.exports.jobsJobIdPatch = function jobsJobIdPatch (req, res, next) {
 };
 
 module.exports.jobsJobIdThreadsGet = function jobsJobIdThreadsGet (req, res, next) {
-  var token = req.swagger.params['token'].value;
-  var key = req.swagger.params['key'].value;
+  var xOcToken = req.swagger.params['X-Oc-Token'].value;
+  var xOcApiKey = req.swagger.params['X-Oc-Api-Key'].value;
   var jobId = req.swagger.params['job_id'].value;
   
 
-  var result = Jobs.jobsJobIdThreadsGet(token, key, jobId);
+  var result = Jobs.jobsJobIdThreadsGet(xOcToken, xOcApiKey, jobId);
 
   if(typeof result !== 'undefined') {
     res.setHeader('Content-Type', 'application/json');

@@ -1,37 +1,37 @@
 'use strict';
 
-exports.jobsGet = function(status, token, key, page) {
+exports.jobsGet = function(status, xOcToken, xOcApiKey, page) {
 
   var examples = {};
   
   examples['application/json'] = [ {
+  "process" : true,
+  "id" : "1b8bb2649c090df97fa1e2658e9722d1",
   "input" : [ {
-    "filename" : "image.png",
-    "size" : "12835187",
-    "created_at" : "2015-07-08T13:32:03.975+0000",
     "id" : "43",
     "source" : "http://www.dropbox.com/f/sfasdfhasdjkr434fadf",
+    "created_at" : "2015-07-15T15:11:53.203+0000",
+    "filename" : "image.png",
     "type" : "aeiou",
-    "modified_at" : "2015-07-08T13:32:03.975+0000"
+    "modified_at" : "2015-07-15T15:11:53.203+0000",
+    "size" : "12835187"
   } ],
-  "server" : "api5//www.online-convert.com",
-  "process" : true,
-  "test" : true,
-  "callback" : "http://www.mysite.com/callback",
-  "created_at" : "2015-07-08T13:32:03.975+0000",
-  "id" : "1b8bb2649c090df97fa1e2658e9722d1",
-  "type" : "aeiou",
-  "modified_at" : "2015-07-08T13:32:03.975+0000",
-  "token" : "12srxin63mgp23f8mtny2rgtgl1nl39i",
+  "conversion" : [ {
+    "id" : "8daae6d1-26e0-11e5-b2a1-0800273b325b",
+    "category" : "audio",
+    "target" : "mp3",
+    "options" : ""
+  } ],
   "status" : {
     "code" : "processing",
     "info" : "The file is being processed."
   },
-  "conversion" : [ {
-    "options" : "",
-    "category" : "audio",
-    "target" : "mp3"
-  } ]
+  "token" : "12srxin63mgp23f8mtny2rgtgl1nl39i",
+  "callback" : "http://www.mysite.com/callback",
+  "created_at" : "2015-07-15T15:11:53.203+0000",
+  "server" : "api5//www.online-convert.com",
+  "type" : "aeiou",
+  "modified_at" : "2015-07-15T15:11:53.203+0000"
 } ];
   
 
@@ -40,38 +40,38 @@ exports.jobsGet = function(status, token, key, page) {
     return examples[Object.keys(examples)[0]];
   
 }
-exports.jobsPost = function(key, body) {
+exports.jobsPost = function(xOcApiKey, body) {
 
   var examples = {};
   
   examples['application/json'] = {
+  "process" : true,
+  "id" : "1b8bb2649c090df97fa1e2658e9722d1",
   "input" : [ {
-    "filename" : "image.png",
-    "size" : "12835187",
-    "created_at" : "2015-07-08T13:32:03.982+0000",
     "id" : "43",
     "source" : "http://www.dropbox.com/f/sfasdfhasdjkr434fadf",
+    "created_at" : "2015-07-15T15:11:53.212+0000",
+    "filename" : "image.png",
     "type" : "aeiou",
-    "modified_at" : "2015-07-08T13:32:03.982+0000"
+    "modified_at" : "2015-07-15T15:11:53.212+0000",
+    "size" : "12835187"
   } ],
-  "server" : "api5//www.online-convert.com",
-  "process" : true,
-  "test" : true,
-  "callback" : "http://www.mysite.com/callback",
-  "created_at" : "2015-07-08T13:32:03.982+0000",
-  "id" : "1b8bb2649c090df97fa1e2658e9722d1",
-  "type" : "aeiou",
-  "modified_at" : "2015-07-08T13:32:03.982+0000",
-  "token" : "12srxin63mgp23f8mtny2rgtgl1nl39i",
+  "conversion" : [ {
+    "id" : "8daae6d1-26e0-11e5-b2a1-0800273b325b",
+    "category" : "audio",
+    "target" : "mp3",
+    "options" : ""
+  } ],
   "status" : {
     "code" : "processing",
     "info" : "The file is being processed."
   },
-  "conversion" : [ {
-    "options" : "",
-    "category" : "audio",
-    "target" : "mp3"
-  } ]
+  "token" : "12srxin63mgp23f8mtny2rgtgl1nl39i",
+  "callback" : "http://www.mysite.com/callback",
+  "created_at" : "2015-07-15T15:11:53.212+0000",
+  "server" : "api5//www.online-convert.com",
+  "type" : "aeiou",
+  "modified_at" : "2015-07-15T15:11:53.212+0000"
 };
   
 
@@ -80,38 +80,38 @@ exports.jobsPost = function(key, body) {
     return examples[Object.keys(examples)[0]];
   
 }
-exports.jobsJobIdGet = function(token, key, jobId) {
+exports.jobsJobIdGet = function(xOcToken, xOcApiKey, jobId) {
 
   var examples = {};
   
   examples['application/json'] = {
+  "process" : true,
+  "id" : "1b8bb2649c090df97fa1e2658e9722d1",
   "input" : [ {
-    "filename" : "image.png",
-    "size" : "12835187",
-    "created_at" : "2015-07-08T13:32:03.986+0000",
     "id" : "43",
     "source" : "http://www.dropbox.com/f/sfasdfhasdjkr434fadf",
+    "created_at" : "2015-07-15T15:11:53.225+0000",
+    "filename" : "image.png",
     "type" : "aeiou",
-    "modified_at" : "2015-07-08T13:32:03.986+0000"
+    "modified_at" : "2015-07-15T15:11:53.225+0000",
+    "size" : "12835187"
   } ],
-  "server" : "api5//www.online-convert.com",
-  "process" : true,
-  "test" : true,
-  "callback" : "http://www.mysite.com/callback",
-  "created_at" : "2015-07-08T13:32:03.986+0000",
-  "id" : "1b8bb2649c090df97fa1e2658e9722d1",
-  "type" : "aeiou",
-  "modified_at" : "2015-07-08T13:32:03.986+0000",
-  "token" : "12srxin63mgp23f8mtny2rgtgl1nl39i",
+  "conversion" : [ {
+    "id" : "8daae6d1-26e0-11e5-b2a1-0800273b325b",
+    "category" : "audio",
+    "target" : "mp3",
+    "options" : ""
+  } ],
   "status" : {
     "code" : "processing",
     "info" : "The file is being processed."
   },
-  "conversion" : [ {
-    "options" : "",
-    "category" : "audio",
-    "target" : "mp3"
-  } ]
+  "token" : "12srxin63mgp23f8mtny2rgtgl1nl39i",
+  "callback" : "http://www.mysite.com/callback",
+  "created_at" : "2015-07-15T15:11:53.225+0000",
+  "server" : "api5//www.online-convert.com",
+  "type" : "aeiou",
+  "modified_at" : "2015-07-15T15:11:53.225+0000"
 };
   
 
@@ -120,38 +120,38 @@ exports.jobsJobIdGet = function(token, key, jobId) {
     return examples[Object.keys(examples)[0]];
   
 }
-exports.jobsJobIdDelete = function(token, key, jobId) {
+exports.jobsJobIdDelete = function(xOcToken, xOcApiKey, jobId) {
 
   var examples = {};
   
   examples['application/json'] = {
+  "process" : true,
+  "id" : "1b8bb2649c090df97fa1e2658e9722d1",
   "input" : [ {
-    "filename" : "image.png",
-    "size" : "12835187",
-    "created_at" : "2015-07-08T13:32:03.990+0000",
     "id" : "43",
     "source" : "http://www.dropbox.com/f/sfasdfhasdjkr434fadf",
+    "created_at" : "2015-07-15T15:11:53.234+0000",
+    "filename" : "image.png",
     "type" : "aeiou",
-    "modified_at" : "2015-07-08T13:32:03.990+0000"
+    "modified_at" : "2015-07-15T15:11:53.234+0000",
+    "size" : "12835187"
   } ],
-  "server" : "api5//www.online-convert.com",
-  "process" : true,
-  "test" : true,
-  "callback" : "http://www.mysite.com/callback",
-  "created_at" : "2015-07-08T13:32:03.990+0000",
-  "id" : "1b8bb2649c090df97fa1e2658e9722d1",
-  "type" : "aeiou",
-  "modified_at" : "2015-07-08T13:32:03.990+0000",
-  "token" : "12srxin63mgp23f8mtny2rgtgl1nl39i",
+  "conversion" : [ {
+    "id" : "8daae6d1-26e0-11e5-b2a1-0800273b325b",
+    "category" : "audio",
+    "target" : "mp3",
+    "options" : ""
+  } ],
   "status" : {
     "code" : "processing",
     "info" : "The file is being processed."
   },
-  "conversion" : [ {
-    "options" : "",
-    "category" : "audio",
-    "target" : "mp3"
-  } ]
+  "token" : "12srxin63mgp23f8mtny2rgtgl1nl39i",
+  "callback" : "http://www.mysite.com/callback",
+  "created_at" : "2015-07-15T15:11:53.234+0000",
+  "server" : "api5//www.online-convert.com",
+  "type" : "aeiou",
+  "modified_at" : "2015-07-15T15:11:53.234+0000"
 };
   
 
@@ -160,38 +160,38 @@ exports.jobsJobIdDelete = function(token, key, jobId) {
     return examples[Object.keys(examples)[0]];
   
 }
-exports.jobsJobIdPatch = function(body, token, key, jobId) {
+exports.jobsJobIdPatch = function(body, xOcToken, xOcApiKey, jobId) {
 
   var examples = {};
   
   examples['application/json'] = {
+  "process" : true,
+  "id" : "1b8bb2649c090df97fa1e2658e9722d1",
   "input" : [ {
-    "filename" : "image.png",
-    "size" : "12835187",
-    "created_at" : "2015-07-08T13:32:03.993+0000",
     "id" : "43",
     "source" : "http://www.dropbox.com/f/sfasdfhasdjkr434fadf",
+    "created_at" : "2015-07-15T15:11:53.244+0000",
+    "filename" : "image.png",
     "type" : "aeiou",
-    "modified_at" : "2015-07-08T13:32:03.993+0000"
+    "modified_at" : "2015-07-15T15:11:53.244+0000",
+    "size" : "12835187"
   } ],
-  "server" : "api5//www.online-convert.com",
-  "process" : true,
-  "test" : true,
-  "callback" : "http://www.mysite.com/callback",
-  "created_at" : "2015-07-08T13:32:03.993+0000",
-  "id" : "1b8bb2649c090df97fa1e2658e9722d1",
-  "type" : "aeiou",
-  "modified_at" : "2015-07-08T13:32:03.993+0000",
-  "token" : "12srxin63mgp23f8mtny2rgtgl1nl39i",
+  "conversion" : [ {
+    "id" : "8daae6d1-26e0-11e5-b2a1-0800273b325b",
+    "category" : "audio",
+    "target" : "mp3",
+    "options" : ""
+  } ],
   "status" : {
     "code" : "processing",
     "info" : "The file is being processed."
   },
-  "conversion" : [ {
-    "options" : "",
-    "category" : "audio",
-    "target" : "mp3"
-  } ]
+  "token" : "12srxin63mgp23f8mtny2rgtgl1nl39i",
+  "callback" : "http://www.mysite.com/callback",
+  "created_at" : "2015-07-15T15:11:53.244+0000",
+  "server" : "api5//www.online-convert.com",
+  "type" : "aeiou",
+  "modified_at" : "2015-07-15T15:11:53.244+0000"
 };
   
 
@@ -200,15 +200,15 @@ exports.jobsJobIdPatch = function(body, token, key, jobId) {
     return examples[Object.keys(examples)[0]];
   
 }
-exports.jobsJobIdThreadsGet = function(token, key, jobId) {
+exports.jobsJobIdThreadsGet = function(xOcToken, xOcApiKey, jobId) {
 
   var examples = {};
   
   examples['application/json'] = [ {
-  "created_at" : "2015-07-08T13:32:04.022+0000",
-  "modified_at" : "2015-07-08T13:32:04.022+0000",
-  "hash" : "aeiou",
   "status" : 123,
+  "hash" : "aeiou",
+  "created_at" : "2015-07-15T15:11:53.323+0000",
+  "modified_at" : "2015-07-15T15:11:53.323+0000",
   "info" : "aeiou"
 } ];
   
